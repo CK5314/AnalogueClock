@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{ 
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display:flex;   
+    align-items:center ;
+     justify-content: center;
+     /* background-size: 100vw 100vh; */
+    background: linear-gradient(42deg, gray,rgb(14, 13, 13));
+}
+.clock{
+    display: flex;
+    position: relative;
+    width: 70vh;
+    height:70vh;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid black;
+    justify-content:center;
+    align-items:  center;
+}
+
+span {
+    position:absolute;
+    inset:20px;
+    display: block;
+    text-align: center;
+   
+     transform: rotate(calc(30deg * var(--number)));
+}
+span p 
+{
+    color: white;
+    font-weight: 400;
+    transform: rotate(calc(-30deg * var(--number)));
+
+}
+.circle
+{
+    position:absolute;
+    background: white;
+    border: 50%;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: none;
+    z-index: 9;
+}
+.hour
+{
+    top:7.4rem;
+    position: absolute;
+    width:0.6rem;
+    height: 6rem;
+    background-color: rgba(10, 10, 7, 0.733);
+    transform: rotate(0deg);
+    transform-origin: bottom;
+    border-radius: 2rem;
+}
+.minute
+{
+    top:6.4rem;
+    position: absolute;
+    width:0.5rem;
+    height: 7rem;
+    background-color: rgba(142, 146, 126, 0.404);
+    transform: rotate(0deg);
+    transform-origin: bottom;
+    border-radius: 2rem;
+}
+.second{
+    top:5.4rem;
+    position: absolute;
+    width:0.4rem;
+    height: 8rem;
+    background-color: rgba(190, 50, 50, 0.829);
+    transform: rotate(0deg);
+    transform-origin: bottom;
+    border-radius: 2rem;
+
+}
+
